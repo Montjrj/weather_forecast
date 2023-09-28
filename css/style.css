@@ -1,0 +1,29 @@
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+
+}
+h2 {
+  
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+
+}
+
+.header {
+
+    background-image: linear-gradient(to right, rgba(0, 19, 124, 0.562), rgba(27, 3, 112, 0.945)); 
+    height: 120px;
+    border-radius: 10px;
+
+}
