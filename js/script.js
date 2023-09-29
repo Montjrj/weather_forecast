@@ -46,28 +46,18 @@ function getCurrentWeather(lat, lon) {
             return response.json()
         })
     .then(function(data) {
-
-        console.log(data)
-        console.log(data.name)
-        console.log(data.main.temp)
-        console.log(data.main.humidity)
-        console.log(data.wind.speed)
-        console.log(data.dt)
-        console.log(data.weather[0].icon)
         var dateFormat = dayjs.unix(data.dt).format('D, MMM. YYYY')
         var dateDisplay = dateFormat
-        var iconurl = "https://openweathermap.org/img/wn/" + iconcode + ".png"
         var iconcode = data.weather[0].icon 
+        var iconurl = `https://openweathermap.org/img/wn/${iconcode}.png`
         var name = $("<h2>").text(data.name)
         var temp = $("<p>").text("Temp: " + Math.round(data.name.temp) + " °F ")
         var windspeed = $("<p>").text("Wind: " + Math.round(data.wind.speed) + " MPH")
         var humidity = $("<p>").text("Humidity: " + data.main.humidity + " %")
         var icon = $("<img>").attr("src", iconurl)
 
-
-
+        $("#currentWeather").append(name, dateDisplay, icon, temp, windspeed, humidity)
         })
-
 }
 
 

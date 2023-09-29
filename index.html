@@ -22,16 +22,22 @@
     <h1>Weather Dashboard</h1>
     <h2><span id="time-display"></span></h2>
 </header>
-    <main>
-     <div>
-      <div id="search_engine">
-        <h1>Search for a City:</h1>
-        <form id="user_form" class="card_body">
-          <label class ="form_label" for="search_value"></label>
-          <input name="search_value" id="search_value" type="text">
-          <button id="submit" type="submit">submit</button>
-        </form>
+    <main class= "container-fluid">
+     <div class ="row"  id="search_engine">
+        <h2>Search for a City:</h2>
+        <div class="row" >
+          <form id="user_form" class="card_body" >
+            <input class="col-9" id="search_value" type="text">
+            <button class="col-3" id="submit" type="submit">submit</button>
+          </form>
+        </div>
       </div>
+      <div id="weatherContainer" class="col-12 col-md-8">
+
+        <div class="row">
+          <h2>Current Weather</h2>
+          <div id="currentWeather"></div>
+        </div>
       </div>
     </main>
 
